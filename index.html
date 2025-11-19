@@ -570,14 +570,14 @@
                         <div class="contact-item">
                             <i class="fab fa-facebook"></i>
                             <a href="https://web.facebook.com/p/%D8%A7%D9%84%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0-%D8%A5%D9%8A%D8%A7%D8%AF-%D8%A3%D8%B5%D9%84%D8%a7%D9%86-61550082517097/" target="_blank">فيسبوك</a>
-                        </div>
+                        </div> 
                         <div class="contact-item">
                             <i class="fab fa-youtube"></i>
                             <a href="https://www.youtube.com/@iyadaslan" target="_blank">يوتيوب</a>
                         </div>
                     </div>
                     
-                    <a href="https://watad.me/%d9%85%d8%a7%d8%af%d8%a9-%d8%a7%d9%84%d9%84%d8%ba%d8%a9-%d8%a7%d9%84%d8%a5%d9%86%d8%ac%d9%84%d9%8a%d8%b2%d9%8a%d8%a9-%d8%ac%d9%8a%d9%84-2006-%d8%a7%d9%84%d8%a3%d8%b3%d8%aa%d8%a7%d8%b0-%d8%a5%d9%8a%d8%a7%d8%af-%d8%a3%d8%b5%d9%84%d8%a7%d9%86/" class="watad-button" target="_blank">
+                    <a href="https://watad.me/%d8%a7%d9%84%d9%84%d8%ba%d8%a9-%d8%a7%d9%84%d8%a7%d9%86%d8%ac%d9%84%d9%8a%d8%b2%d9%8a%d8%a9-%d8%ac%d9%8a%d9%84-2009-%d8%a7%d9%84%d8%a7%d8%b3%d8%aa%d8%a7%d8%b0-%d8%a7%d9%8a%d8%a7%d8%af-%d8%a7%d8%b5/" class="watad-button" target="_blank">
                         <i class="fas fa-id-card" style="margin-left: 10px;"></i> بطاقة الأستاذ على موقع وتد التعليمي
                     </a>
                 </div>
@@ -633,9 +633,6 @@
                 
                 <h1 style="color: var(--primary-light); font-size: 2.3rem; text-align: center; margin-bottom: 30px; text-shadow: 0 0 5px rgba(0, 230, 118, 0.5);">اختر المسار الذي تريده</h1>
                 
-                <button id="admin-login-button-options" class="submit-button" onclick="showAdminLogin()" style="max-width: 500px; display: none;">
-                    <i class="fas fa-user-shield"></i> سجل العلامات (للأستاذ فقط)
-                </button>
                 
                 <div class="teacher-social-card content-container" style="max-width: 500px; margin: 30px auto; text-align: center;"> 
                     <img src="channels4_profile.jpg" alt="صورة الأستاذ إياد أصلان" style="width: 90px; height: 90px; border-color: var(--primary-color); box-shadow: 0 0 8px rgba(0, 191, 99, 0.5); display: block; margin: 0 auto 10px auto; border-radius: 50%; object-fit: cover;">
@@ -1349,7 +1346,7 @@ Today, thanks to tiny silicon chips, computers are everywhere. They are used in 
         
         // 🗑️ مسح جميع السجلات
         function clearAllLogs() {
-            if (confirm("هل أنت متأكد من مسح جميع سجلات العلامات؟ لا يمكن التراجع عن هذا الإجراء.")) {
+ {
                 localStorage.removeItem('examLogs');
                 loadLogs();
             }
@@ -1412,8 +1409,6 @@ Today, thanks to tiny silicon chips, computers are everywhere. They are used in 
                 const adminButton = document.getElementById('admin-login-button');
                 if (adminButton && document.getElementById('welcome-section').style.display === 'block') {
                     adminButton.style.display = 'block';
-                    // رسالة توضيحية مؤقتة
-                    alert("تم تفعيل زر 'دخول صفحة الإدارة' في الأسفل.");
                 }
                 clickCount = 0; // إعادة التعيين بعد التفعيل
             }
