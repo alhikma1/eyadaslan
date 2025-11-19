@@ -1426,6 +1426,36 @@ Today, thanks to tiny silicon chips, computers are everywhere. They are used in 
             showWelcome();
         });
     </script>
-</body>
-</html>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+<script>
+    // *********************************************************************************
+    // 🛑🛑🛑 **ابدأ هنا: مفتاح إعداد FIREBASE الخاص بك** 🛑🛑🛑
+    // 🛑🛑🛑 **يجب عليك استبدال هذا الكائن (Firebase Config) بالمفتاح الذي حصلت عليه من موقع Firebase** 🛑🛑🛑
+    // *********************************************************************************
 
+    const firebaseConfig = {
+    apiKey: "AIzaSyCMmWZASDBZOz6tlIzXdWcdkuLsUdZOXSg",
+    authDomain: "bank-questions-iyad.firebaseapp.com",
+    projectId: "bank-questions-iyad",
+    storageBucket: "bank-questions-iyad.firebasestorage.app",
+    messagingSenderId: "629383815180",
+    appId: "1:629383815180:web:616842bf7100d69778ce29",
+    measurementId: "G-8W714FQKGW"
+    };
+    
+    // تهيئة Firebase
+    if (!firebase.apps.length) {
+        firebase.initializeApp(firebaseConfig);
+    }
+    const database = firebase.database();
+    const resultsRef = database.ref('quiz_results'); // المرجع الرئيسي للسجلات
+    
+    // *********************************************************************************
+    // ** نهاية قسم FIREBASE Config **
+    // *********************************************************************************
+    
+    // ... (بقية كود JavaScript يبدأ هنا، حتى نهاية الملف) ...
+</script>
+</body> 
+</html>
